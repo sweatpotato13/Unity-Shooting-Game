@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/OptionScreen.unity
+    guid: 3d18ba280d82647f2a54054efe58d8b0
+  - enabled: 1
+    path: Assets/Scenes/ShopScreen.unity
+    guid: b2e68fefcb83f41b98c21f27bf0ce368
+  - enabled: 1
     path: Assets/Scenes/StageSelectScene.unity
     guid: a458d1ead09f041849502e257b0680ac
   - enabled: 1
