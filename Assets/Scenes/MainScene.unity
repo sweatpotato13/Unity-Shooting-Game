@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 141342655}
   - component: {fileID: 141342658}
   m_Layer: 5
-  m_Name: Shop
+  m_Name: ShopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 141342653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac76d33719dc044d3895b6a1c1b64fce, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c5bc948427ea4178b50628dfa812ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &401443251
@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 1176835039}
   - component: {fileID: 1176835038}
   - component: {fileID: 1176835037}
+  - component: {fileID: 1176835040}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -542,8 +543,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1176835038}
   m_OnClick:
     m_PersistentCalls:
-    m_Calls:
-      - m_Target: {fileID: 401443256}
+      m_Calls:
+      - m_Target: {fileID: 1176835040}
         m_MethodName: ChangeStageSelectScene
         m_Mode: 1
         m_Arguments:
@@ -590,6 +591,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176835035}
   m_CullTransparentMesh: 0
+--- !u!114 &1176835040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176835035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5bc948427ea4178b50628dfa812ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1277318247
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +767,7 @@ GameObject:
   - component: {fileID: 2048209200}
   - component: {fileID: 2048209203}
   m_Layer: 5
-  m_Name: Option
+  m_Name: OptionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +892,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2048209198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac76d33719dc044d3895b6a1c1b64fce, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c5bc948427ea4178b50628dfa812ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2074091880

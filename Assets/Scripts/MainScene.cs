@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class MainScreen : MonoBehaviour
+public class MainScene : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,12 +19,12 @@ public class MainScreen : MonoBehaviour
 
     public void ChangeOptionScene()
     {
-        SceneManager.LoadScene("OptionScreen");
+        SceneManager.LoadScene("OptionScene");
     }
 
     public void ChangeShopScene()
     {
-        SceneManager.LoadScene("ShopScreen");
+        SceneManager.LoadScene("ShopScene");
     }
 
     public void ChangeStageSelectScene()

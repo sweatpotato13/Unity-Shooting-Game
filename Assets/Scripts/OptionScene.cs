@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class OptionScreen : MonoBehaviour
+public class OptionScene : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,6 @@ public class OptionScreen : MonoBehaviour
     }
     public void ChangeMainScene()
     {
-        SceneManager.LoadScene("MainScreen");
+        SceneManager.LoadScene("MainScene");
     }
 }
