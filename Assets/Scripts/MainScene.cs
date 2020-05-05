@@ -24,16 +24,19 @@ public class MainScene : MonoBehaviour
 
     public void ChangeOptionScene()
     {
+        SoundManager.instance.PlayClickButton();
         SceneManager.LoadScene("OptionScene");
     }
 
     public void ChangeShopScene()
     {
+        SoundManager.instance.PlayClickButton();
         SceneManager.LoadScene("ShopScene");
     }
 
     public void ChangeStageSelectScene()
     {
-      SceneManager.LoadScene("StageSelectScene");
+        SoundManager.instance.PlayClickButton();
+        SceneManager.LoadScene("StageSelectScene");
     }
 }
