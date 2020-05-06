@@ -22,11 +22,11 @@ public class SwipeMove : MonoBehaviour
         if (swipeControls.SwipeRight)
           desiredPosition += Vector3.right;
         if (swipeControls.SwipeUp)
-          desiredPosition += Vector3.forward;
+          desiredPosition += Vector3.up;
         if (swipeControls.SwipeDown)
-          desiredPosition += Vector3.back;
+          desiredPosition += Vector3.down;
 
-        player.transform.position = Vector3.MoveTowards(player.transform.position, desiredPosition, 3f * Time.deltaTime);
+        player.transform.position = Vector3.MoveTowards(player.transform.position, desiredPosition, 1000 * Time.deltaTime);
         if (swipeControls.Tap)
             Debug.Log("Tap");
     }

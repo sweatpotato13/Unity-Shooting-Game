@@ -21,4 +21,9 @@ public class StageSelectScene : MonoBehaviour
     {
       SceneManager.LoadScene("InGameScene");
     }
+
+    public void ChangeMainScene()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 }
