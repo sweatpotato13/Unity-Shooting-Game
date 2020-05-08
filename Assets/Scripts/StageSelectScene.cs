@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class StageSelectScene : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class StageSelectScene : MonoBehaviour
 
     public void ChangeInGameScene()
     {
-      SceneManager.LoadScene("InGameScene");
+        string name =  EventSystem.current.currentSelectedGameObject.name;
+        SceneManager.LoadScene("InGameScene");
+        Debug.Log(name);
+        PlayerPrefs.SetString("stage", name);
     }
 
     public void ChangeMainScene()
