@@ -26,13 +26,7 @@ public class BGMSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-          if (AudioSource.clip == BGM1)
-              SetBGM2();
-          else
-              SetBGM1();
-        }
+    
     }
 
     public void SetBGM1() // Sound Manager를 이용하는 방법으로 바뀌어야함. 이 메소드는 임시방편.
