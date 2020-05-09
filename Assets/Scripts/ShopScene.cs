@@ -18,6 +18,7 @@ public class ShopScene : MonoBehaviour
     }
     public void ChangeMainScene()
     {
+        SoundManager.instance.PlaySound("ButtonClick");
         SceneManager.LoadScene("MainScene");
     }
 }
