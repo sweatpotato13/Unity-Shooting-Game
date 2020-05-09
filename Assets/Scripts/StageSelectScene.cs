@@ -21,9 +21,9 @@ public class StageSelectScene : MonoBehaviour
     public void ChangeInGameScene()
     {
         string name =  EventSystem.current.currentSelectedGameObject.name;
-        SceneManager.LoadScene("InGameScene");
         Debug.Log(name);
         PlayerPrefs.SetString("stage", name);
+        SceneManager.LoadScene("InGameScene");
     }
 
     public void ChangeMainScene()

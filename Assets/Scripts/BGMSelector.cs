@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class BGMSelector : MonoBehaviour
 {
-    public AudioSource AudioSource;
-    public AudioClip BGM1;
-    public AudioClip BGM2;
-
     // Start is called before the first frame update
     void Start()
     {
-        AudioSource = GetComponent<AudioSource>();
+        Debug.Log("BGMSelectStart");
         switch(PlayerPrefs.GetString("stage"))
         {
           case "Button1":
@@ -31,13 +27,15 @@ public class BGMSelector : MonoBehaviour
 
     public void SetBGM1() // Sound Manager를 이용하는 방법으로 바뀌어야함. 이 메소드는 임시방편.
     {
-        AudioSource.clip = BGM1;
-        AudioSource.Play();
+        Debug.Log("SetBGM1");
+        SoundManager.instance.StopBGM();
+        SoundManager.instance.PlaySound("yamanote");
     }
 
     public void SetBGM2() // Sound Manager를 이용하는 방법으로 바뀌어야함. 이 메소드는 임시방편.
     {
-        AudioSource.clip = BGM2;
-        AudioSource.Play();
+        Debug.Log("SetBGM2");
+        SoundManager.instance.StopBGM();
+        SoundManager.instance.PlaySound("Emerald_Sword");
     }
 }

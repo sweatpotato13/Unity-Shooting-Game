@@ -65,6 +65,7 @@ public class SoundManager : MonoBehaviour
     // 한 번 재생 : 볼륨 매개변수로 지정
     public void PlaySound(string a_name, float a_volume = 1f)
     {
+        Debug.Log(a_name);
         if (audioClipsDic.ContainsKey(a_name) == false)
         {
             Debug.Log(a_name + " is not Contained audioClipsDic");
@@ -110,6 +111,12 @@ public class SoundManager : MonoBehaviour
     public void StopBGM()
     {
         bgmPlayer.Stop();
+    }
+
+    public void StartBGM()
+    {
+        if(bgmPlayer != null)
+        	bgmPlayer.Play();
     }
 
     public void SetVolumeSFX(float a_volume)

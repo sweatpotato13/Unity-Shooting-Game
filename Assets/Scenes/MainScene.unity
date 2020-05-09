@@ -429,8 +429,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -510,6 +510,8 @@ MonoBehaviour:
   BGMClip: {fileID: 8300000, guid: 3e9a2ca3e78e147e88ab41ab64720fcc, type: 3}
   audioClip:
   - {fileID: 8300000, guid: 75913790c165243e5827fe9f43835a48, type: 3}
+  - {fileID: 8300000, guid: 0bcff3b4ab1a74d4c9d8c7923a7b6890, type: 3}
+  - {fileID: 8300000, guid: 60415fc904d9347ada34d141ba2bbdd5, type: 3}
 --- !u!82 &839777762
 AudioSource:
   m_ObjectHideFlags: 0
