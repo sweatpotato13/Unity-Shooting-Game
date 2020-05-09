@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class OptionScene : MonoBehaviour
 {
-    public Slider bgmVolume = null;
-    public Slider sfxVolume = null;
+    public Slider bgmVolume;
+    public Slider sfxVolume;
 
     private float bgmVol = 1f;
     private float sfxVol = 1f;
@@ -15,12 +15,11 @@ public class OptionScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bgmVol = PlayerPrefs.GetFloat("bgmVol",1f);
+        Load();
         bgmVolume.value = bgmVol;
         SoundManager.instance.SetVolumeBGM(bgmVolume.value);
 
-        sfxVol = PlayerPrefs.GetFloat("sfxVol",1f);
-        bgmVolume.value = sfxVol;
+        sfxVolume.value = sfxVol;
         SoundManager.instance.SetVolumeSFX(sfxVolume.value);
     }
 
@@ -28,16 +27,36 @@ public class OptionScene : MonoBehaviour
     void Update()
     {
         SoundSlider();
+        Save();
+    }
+
+    public void Load(){
+        if(PlayerPrefs.HasKey("bgmVol")){
+            bgmVol = PlayerPrefs.GetFloat("bgmVol");
+            Debug.Log("bgmVol Loaded" + bgmVol);
+        }
+        if(PlayerPrefs.HasKey("sfxVol")){
+            sfxVol = PlayerPrefs.GetFloat("sfxVol");
+            Debug.Log("sfxVol Loaded" + sfxVol);
+        }
+    }
+
+    public void Save(){
+        PlayerPrefs.SetFloat("bgmVol", bgmVol);
+        PlayerPrefs.SetFloat("sfxVol", sfxVol);
+        Debug.Log("bgmVol Saved" + bgmVol);
+        Debug.Log("sfxVol Saved" + sfxVol);
     }
 
     public void SoundSlider()
     {
         SoundManager.instance.SetVolumeBGM(bgmVolume.value);
         bgmVol = bgmVolume.value;
-        PlayerPrefs.SetFloat("bgmVol",bgmVol);
+        
         SoundManager.instance.SetVolumeSFX(sfxVolume.value);
         sfxVol = sfxVolume.value;
-        PlayerPrefs.SetFloat("sfxVol",sfxVol);
+        Debug.Log("bgmVol Updated" + bgmVol);
+        Debug.Log("sfxVol Updated" + sfxVol);
     }
 
     public void ChangeMainScene()
