@@ -13,10 +13,11 @@ public class MoveTest : MonoBehaviour
   	private Vector3 targetPos = Vector3.zero;
     private Vector3 mousepos = Vector3.zero;
   	private bool isClicked = false;
+
     // Update is called once per frame
   	void Update()
   	{
-  		DragObject();
+  		  DragObject();
   	}
   	void DragObject()
   	{
@@ -45,4 +46,5 @@ public class MoveTest : MonoBehaviour
         transform.position = targetPos;
   		}
   	}
+
 }
