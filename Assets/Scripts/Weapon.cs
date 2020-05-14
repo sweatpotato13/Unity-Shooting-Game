@@ -39,7 +39,7 @@ public class Weapon : MonoBehaviour
 
 			Move tempMove = shotTransform.gameObject.GetComponent<Move> ();
 			if (tempMove != null) {
-				tempMove.direction = transform.right;
+				tempMove.direction = new Vector3(0,-1,0);//transform.up;
 			}
 
 		}
