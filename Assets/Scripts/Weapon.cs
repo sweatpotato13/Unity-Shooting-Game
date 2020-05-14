@@ -36,12 +36,12 @@ public class Weapon : MonoBehaviour
 			if (tempShot != null) {
 				tempShot.isEnemyShot = isEnemy;
 			}
-/*
+
 			Move tempMove = shotTransform.gameObject.GetComponent<Move> ();
 			if (tempMove != null) {
 				tempMove.direction = transform.right;
 			}
-*/
+
 		}
 	}
 }
