@@ -4,12 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 public class MoveTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
-private Vector3 startPos = Vector3.zero;
+	private Vector3 startPos = Vector3.zero;
   	private Vector3 endPos = Vector3.zero;
   	private Vector3 targetPos = Vector3.zero;
     private Vector3 mousepos = Vector3.zero;
@@ -74,7 +70,7 @@ private Vector3 startPos = Vector3.zero;
   		}
 
   	}
-
+	
 	void OnTriggerEnter2D(Collider2D coll){
 	    if (coll.gameObject.tag == "Bullet")
 	    {
@@ -82,4 +78,5 @@ private Vector3 startPos = Vector3.zero;
 			SceneManager.LoadScene("StageSelectScene");
 	    }
 	}
+	
 }

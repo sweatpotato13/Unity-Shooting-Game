@@ -6,6 +6,7 @@ public class Shot : MonoBehaviour
 {
     public int damage = 1;
 	public bool isEnemyShot = false;
+    public bool seen;
     Vector3 pos;
     // Start is called before the first frame update
     void Start()
@@ -16,9 +17,17 @@ public class Shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         pos = Camera.main.WorldToScreenPoint(transform.position);
-        if(pos.y < -50){
+        if(pos.y < -90){
             Destroy(gameObject);
         }
+        */
+        if (GetComponent<Renderer>().isVisible)
+          seen = true;
+
+        if (seen && !GetComponent<Renderer>().isVisible)
+          Destroy(gameObject);
+        
     }
 }

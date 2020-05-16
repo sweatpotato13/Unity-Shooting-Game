@@ -15,14 +15,13 @@ public class Health : MonoBehaviour
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		Shot tempShot = other.gameObject.GetComponent<Shot> ();
-		if (tempShot != null) {
-			if (tempShot.isEnemyShot != isEnemy) {
-				Damage (tempShot.damage);
-				Destroy (tempShot.gameObject);
-			}
-		}
+	    if (other.gameObject.tag == "Finish")
+	    {
+			Destroy(other.gameObject);
+			Damage(1);
+	    }
 	}
+
     // Start is called before the first frame update
     void Start()
     {
