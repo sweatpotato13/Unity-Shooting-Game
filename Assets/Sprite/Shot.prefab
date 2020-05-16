@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 2724821271678942041}
   - component: {fileID: 2724821271678942042}
   - component: {fileID: 2724821271678942046}
-  - component: {fileID: 6711306895790267109}
   m_Layer: 0
-  m_Name: Shot 1
+  m_Name: Shot
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,17 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   isEnemyShot: 1
---- !u!114 &6711306895790267109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724821271678942043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002d8550023a147b0bcb14840d528cfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 5, y: 5}
-  direction: {x: 1, y: 0}
+  seen: 0

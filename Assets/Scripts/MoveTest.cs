@@ -74,8 +74,8 @@ public class MoveTest : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D coll){
 	    if (coll.gameObject.tag == "Bullet")
 	    {
-			Destroy(this.gameObject);
-			SceneManager.LoadScene("StageSelectScene");
+			//Destroy(this.gameObject);
+			//SceneManager.LoadScene("StageSelectScene");
 	    }
 	}
 	
