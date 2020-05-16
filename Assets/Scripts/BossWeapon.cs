@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class BossWeapon : MonoBehaviour
 {
     public Transform shotPrefab;
 	public float shootingRate = 0.25f;

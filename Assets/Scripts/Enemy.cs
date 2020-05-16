@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-	private Weapon[] myWeapons;
+	private BossWeapon[] myWeapons;
 
 	void Awake(){
-		myWeapons = GetComponentsInChildren<Weapon> ();
+		myWeapons = GetComponentsInChildren<BossWeapon> ();
 	}
 		
 	void Update () {
