@@ -21,9 +21,6 @@ public class Spinshot : MonoBehaviour {
         //총알 생성
         GameObject temp = Instantiate(bullet);
 
-        //2초후 자동 삭제
-        Destroy(temp, 2f);
-
         //총알 생성 위치를 머즐 입구로 한다.
         temp.transform.position = transform.position;
 
