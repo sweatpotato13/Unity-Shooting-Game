@@ -531,14 +531,14 @@ RectTransform:
   m_GameObject: {fileID: 1614162319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -9.997726}
-  m_LocalScale: {x: 42.154503, y: 42.154503, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 0}
   m_Children: []
   m_Father: {fileID: 2122885853}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 603.0005, y: 80.99988}
+  m_AnchoredPosition: {x: 355, y: 101}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1614162321
@@ -651,11 +651,11 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 1
 --- !u!1 &1827032989
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +732,6 @@ GameObject:
   - component: {fileID: 1852078191}
   - component: {fileID: 1852078192}
   - component: {fileID: 1852078193}
-  - component: {fileID: 1852078196}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -826,8 +825,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009e550aea9c44fb182e50b13373a7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
+  hp: 1000
   isEnemy: 1
+  pattern:
+  - {fileID: 1827032989}
+  - {fileID: 620661792}
+  - {fileID: 1029022733}
+  - {fileID: 866923943}
+  keyHP: bc02000090010000c800000064000000
 --- !u!212 &1852078194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -879,18 +884,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1852078196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852078189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cabff1a678c0422681b911ca06e22c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1913030243 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2724821271678942043, guid: dbe6794974a7745afb161b29cfccdbe0,
