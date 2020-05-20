@@ -618,7 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 7363503357495982275}
   CanShoot: 1
-  ShootDelay: 0.5
+  ShootDelay: 0.1
 --- !u!50 &1614162324
 Rigidbody2D:
   serializedVersion: 4
