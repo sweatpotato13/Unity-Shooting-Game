@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 	void Update () {
 		for (int i = 0; i < myWeapons.Length; i++) {
 			if (myWeapons[i] != null && myWeapons[i].CanAttack) {
-				myWeapons[i].RandomAttack (true);
+				myWeapons[i].RandomAimingAttack (true);
 			}	
 		}
 
