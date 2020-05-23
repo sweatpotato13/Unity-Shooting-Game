@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
     IEnumerator Shoot()
     {
         CanShoot = false;
-        Instantiate(BulletPrefab, transform.position, transform.rotation);
+        Instantiate(Resources.Load ("Bullet", typeof(GameObject)), transform.position, transform.rotation);
         yield return new WaitForSeconds(ShootDelay);
         CanShoot = true;
     }
