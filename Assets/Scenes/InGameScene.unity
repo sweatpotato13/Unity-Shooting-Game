@@ -714,6 +714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37cdc556720904df6a81fcafd9edcded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 923872702}
+  rotationLimitDegree: 30
   shootingRate: 0.5
   pos: {fileID: 1827032990}
   Center: {fileID: 1852078190}
