@@ -6,6 +6,8 @@ public class Health : MonoBehaviour
 {
     public int hp = 1;
 	public bool isEnemy = true;
+    [SerializeField] GameObject[] pattern;
+	[SerializeField] int[] keyHP;
 
 	public void Damage(int value){
 		hp = hp - value;
@@ -25,12 +27,23 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+		for(int i = 0;i<pattern.Length;i++){
+			pattern[i].SetActive(false);
+		}
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        for(int i = 0;i<pattern.Length;i++){
+			if(hp > keyHP[i]){
+				pattern[i].SetActive(true);
+				break;
+			}
+			else{
+				pattern[i].SetActive(false);
+			}
+		}
+
     }
 }
