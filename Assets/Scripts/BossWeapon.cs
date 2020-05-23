@@ -36,12 +36,12 @@ public class BossWeapon : MonoBehaviour
 			if (tempShot != null) {
 				tempShot.isEnemyShot = isEnemy;
 			}
-
-			Move tempMove = shotTransform.gameObject.GetComponent<Move> ();
-			if (tempMove != null) {
-				tempMove.direction = new Vector3(0,-1,0);//transform.up;
+			
+			Move[] tempMove = new Move[10];
+			for(int i = 0;i<10;i++){
+				tempMove[i] = shotTransform.gameObject.GetComponent<Move> ();
+				tempMove[i].direction = new Vector3(-Mathf.Cos(Mathf.PI/4 * (i*2)/7) , -Mathf.Sin(Mathf.PI/4 * (i*2)/7),0);
 			}
-
 		}
 	}
 }
