@@ -20,7 +20,7 @@ public class MoveTest : MonoBehaviour
     // Update is called once per frame
   	void Update()
   	{
-  		  //DragObject();
+  		//DragObject();
         SlideMove();
   	}
 
@@ -69,14 +69,5 @@ public class MoveTest : MonoBehaviour
 		    //Debug.Log("Player: " + transform.position);
   		}
 
-  	}
-	
-	void OnTriggerEnter2D(Collider2D coll){
-	    if (coll.gameObject.tag == "Bullet")
-	    {
-			Destroy(this.gameObject);
-			SceneManager.LoadScene("StageSelectScene");
-	    }
-	}
-	
+  	}	
 }

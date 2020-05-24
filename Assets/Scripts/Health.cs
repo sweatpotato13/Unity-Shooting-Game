@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
 	    {
 			Destroy(other.gameObject);
 			Damage(1);
+			GameObject.Find("Player").GetComponent<PlayerManager>().addScore(1);
 	    }
 	}
 
