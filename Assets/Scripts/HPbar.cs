@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class HPbar : MonoBehaviour
 {
-    public Slider mainSlider;
-
+    public SimpleHealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
-        mainSlider.value = 100;
+        healthBar.UpdateBar(100, 100);
     }
 
     // Update is called once per frame
@@ -23,6 +22,6 @@ public class HPbar : MonoBehaviour
         else
             val = 0;
         Debug.Log(val);
-        mainSlider.value = val;
+        healthBar.UpdateBar( val, 100 );
     }
 }

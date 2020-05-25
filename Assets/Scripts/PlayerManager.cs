@@ -26,6 +26,10 @@ public class PlayerManager : MonoBehaviour
         this.score += val;
     }
 
+    public int getScore(){
+        return this.score;
+    }
+
 	void OnTriggerEnter2D(Collider2D coll){
 	    if (coll.gameObject.tag == "Bullet")
 	    {
