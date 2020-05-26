@@ -26,4 +26,4 @@ Make Shooting game with unity for iOS
 * [sweatpotato13](https://github.com/sweatpotato13)  
 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/sweatpotato13/Unity-Project/graphs/contributors) who participated in this project.
