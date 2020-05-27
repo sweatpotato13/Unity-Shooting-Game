@@ -18,6 +18,8 @@ public class BombButton1 : MonoBehaviour
 
     public void DestroyObjects(string tag)
     {
+        ParticleSystem ps = GameObject.Find("BombParticle").GetComponent<ParticleSystem>();
+        ps.Play();
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag(tag);
         foreach (GameObject target in gameObjects)
         {
