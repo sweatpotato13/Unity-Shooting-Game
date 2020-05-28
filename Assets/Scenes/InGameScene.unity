@@ -1143,7 +1143,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1000
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5352,7 +5352,7 @@ GameObject:
   - component: {fileID: 1095258677}
   m_Layer: 0
   m_Name: BombButton2
-  m_TagString: Untagged
+  m_TagString: BombButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5389,6 +5389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c6896639da34b529503b6295dad4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
 --- !u!114 &1095258678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5494,7 +5495,7 @@ GameObject:
   - component: {fileID: 1396158658}
   m_Layer: 0
   m_Name: BombButton1
-  m_TagString: Untagged
+  m_TagString: BombButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5621,6 +5622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a988dbb83a394fcd8203cded9552bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
 --- !u!1 &1477684687
 GameObject:
   m_ObjectHideFlags: 0
@@ -6555,7 +6557,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10498,6 +10500,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 7363503357495982275}
   CanShoot: 1
   ShootDelay: 0.1
+  BombCount: 2
 --- !u!50 &1614162324
 Rigidbody2D:
   serializedVersion: 4
