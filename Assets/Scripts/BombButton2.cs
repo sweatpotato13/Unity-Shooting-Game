@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BombButton1 : MonoBehaviour
+public class BombButton2 : MonoBehaviour
 {
-    // Start is called before the first frame update
     private int BombCount;
     public List<Button> buttons;
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -19,8 +19,8 @@ public class BombButton1 : MonoBehaviour
         
     }
 
-    public void DestroyObjects(string tag)
-    {   
+    public void MeteorAttack(string tag)
+    {
         BombCount = PlayerPrefs.GetInt("Bomb");
         if (BombCount > 0)
         {
@@ -38,7 +38,7 @@ public class BombButton1 : MonoBehaviour
                 }
             }
             PlayerPrefs.SetInt("Bomb", BombCount);
-            ParticleSystem ps = GameObject.Find("BombParticle").GetComponent<ParticleSystem>();
+            ParticleSystem ps = GameObject.Find("MeteorParticle").GetComponent<ParticleSystem>();
             ps.Play();
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag(tag);
             foreach (GameObject target in gameObjects)
