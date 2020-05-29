@@ -31,6 +31,14 @@ public class PlayerManager : MonoBehaviour
         return this.score;
     }
 
+    public int getLife(){
+        return this.life;
+    }
+
+    public int getBomb(){
+        return this.bomb;
+    }
+
     public void Damage(int dmg)
     {
         if(invincible <= System.DateTime.Now)

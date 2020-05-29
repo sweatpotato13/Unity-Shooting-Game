@@ -21,7 +21,6 @@ public class HPbar : MonoBehaviour
             val = temp.GetComponent<Health>().getHprate();
         else
             val = 0;
-        Debug.Log(val);
         healthBar.UpdateBar( val, 100 );
     }
 }
