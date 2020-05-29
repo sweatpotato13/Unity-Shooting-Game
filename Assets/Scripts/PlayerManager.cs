@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public int bomb = 3;
     public int score = 0;
 	private Vector3 startPos = Vector3.zero;
+    System.DateTime invincible = System.DateTime.Now;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +31,27 @@ public class PlayerManager : MonoBehaviour
         return this.score;
     }
 
+    public void Damage(int dmg)
+    {
+        if(invincible <= System.DateTime.Now)
+        {
+            life -= dmg;
+            Reset();
+        }
+    }
+
+    void Reset ()
+    {
+        transform.position = startPos;
+        invincible = System.DateTime.Now.AddSeconds(5);
+    }
+
+
 	void OnTriggerEnter2D(Collider2D coll){
 	    if (coll.gameObject.tag == "Bullet")
 	    {
             if(life > 0){
-                life--;
-        	    transform.position = startPos;
+                Damage(1);
             }
             else{
 			    Destroy(this.gameObject);
