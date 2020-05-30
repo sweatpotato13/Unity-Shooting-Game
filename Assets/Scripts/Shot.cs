@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shot : MonoBehaviour
 {
     public int damage = 1;
-	public bool isEnemyShot = false;
+	  public bool isEnemyShot = false;
     public bool seen;
     Vector3 pos;
     // Start is called before the first frame update
