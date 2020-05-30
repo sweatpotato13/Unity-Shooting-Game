@@ -10,17 +10,19 @@ public class PlayerManager : MonoBehaviour
     public int score = 0;
 	private Vector3 startPos = Vector3.zero;
     System.DateTime invincible = System.DateTime.Now;
+    SpriteRenderer render;
 
     // Start is called before the first frame update
     void Start()
     {
   		startPos = this.transform.position;
+        render = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void addScore(int val){
@@ -39,6 +41,15 @@ public class PlayerManager : MonoBehaviour
         return this.bomb;
     }
 
+    IEnumerator blink(){
+        for(int i = 0;i<6;i++){
+            render.color = new Color(1f, 1f, 1f, 0.5f);
+            yield return new WaitForSeconds(0.25f);
+            render.color = new Color(1f, 1f, 1f, 1f);
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
     public void Damage(int dmg)
     {
         if(invincible <= System.DateTime.Now)
@@ -51,7 +62,8 @@ public class PlayerManager : MonoBehaviour
     void Reset ()
     {
         transform.position = startPos;
-        invincible = System.DateTime.Now.AddSeconds(5);
+        invincible = System.DateTime.Now.AddSeconds(3);
+        StartCoroutine(blink());
     }
 
 
