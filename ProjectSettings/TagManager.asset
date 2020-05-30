@@ -7,6 +7,8 @@ TagManager:
   - StageBackground
   - Enemy
   - Bullet
+  - BombParticle
+  - BombButton
   layers:
   - Default
   - TransparentFX
