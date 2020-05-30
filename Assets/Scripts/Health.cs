@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int hp = 1;
+    public float hp = 1f;
+	float damage = 0f;
 	public bool isEnemy = true;
     [SerializeField] GameObject[] pattern;
 	[SerializeField] int[] keyHP;
 
 	public void Damage(int value){
-		hp = hp - value;
-		if (hp <= 0) {
+		damage += value;
+		//hp = hp - value;
+		if (damage >= hp) {
 			Destroy (gameObject);
 		}
+	}
+
+	public float getHprate(){
+		return ((hp-damage)/hp) * 100;
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -21,6 +27,7 @@ public class Health : MonoBehaviour
 	    {
 			Destroy(other.gameObject);
 			Damage(1);
+			GameObject.Find("Player").GetComponent<PlayerManager>().addScore(1);
 	    }
 	}
 
