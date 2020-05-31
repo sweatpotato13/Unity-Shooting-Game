@@ -54,6 +54,7 @@ public class PlayerManager : MonoBehaviour
     {
         if(invincible <= System.DateTime.Now)
         {
+            SoundManager.instance.PlaySound("Explode_02",  SoundManager.instance.masterVolumeSFX);
             life -= dmg;
             Reset();
         }
@@ -75,6 +76,7 @@ public class PlayerManager : MonoBehaviour
             }
             else{
 			    Destroy(this.gameObject);
+                SoundManager.instance.StartBGM();
 			    SceneManager.LoadScene("StageSelectScene");
             }
 	    }

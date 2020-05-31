@@ -507,11 +507,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterVolumeSFX: 1
   masterVolumeBGM: 1
-  BGMClip: {fileID: 8300000, guid: 3e9a2ca3e78e147e88ab41ab64720fcc, type: 3}
+  BGMClip: {fileID: 8300000, guid: bcf737dd112a945ea8ddf7faddf240df, type: 3}
   audioClip:
   - {fileID: 8300000, guid: 75913790c165243e5827fe9f43835a48, type: 3}
-  - {fileID: 8300000, guid: 0bcff3b4ab1a74d4c9d8c7923a7b6890, type: 3}
-  - {fileID: 8300000, guid: 60415fc904d9347ada34d141ba2bbdd5, type: 3}
+  - {fileID: 8300000, guid: d7550df87e06fba479f77c93f02e5a58, type: 3}
+  - {fileID: 8300000, guid: c80e0a7a14d5b814d83eeb22fff84c11, type: 3}
+  - {fileID: 8300000, guid: 6cd6e0fa2014be74ea13ceecec0975ac, type: 3}
+  - {fileID: 8300000, guid: e351056e49377654fa3a85327d509ecf, type: 3}
+  - {fileID: 8300000, guid: d60fa6e52bd7a4646b666b8c7d03f148, type: 3}
 --- !u!82 &839777762
 AudioSource:
   m_ObjectHideFlags: 0
