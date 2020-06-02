@@ -26,6 +26,7 @@ public class MainScene : MonoBehaviour
     {
         SoundManager.instance.PlaySound("ButtonClick");
         SceneManager.LoadScene("OptionScene");
+
     }
 
     public void ChangeShopScene()
@@ -37,6 +38,6 @@ public class MainScene : MonoBehaviour
     public void ChangeStageSelectScene()
     {
         SoundManager.instance.PlaySound("ButtonClick");
-        SceneManager.LoadScene("StageSelectScene");
+        LoadingSceneManager.LoadScene("StageSelectScene");
     }
 }
