@@ -5506,10 +5506,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095258675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9c6896639da34b529503b6295dad4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a988dbb83a394fcd8203cded9552bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  player: {fileID: 1614162319}
+  ps: {fileID: 1477684690}
 --- !u!114 &1095258678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5554,7 +5556,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1095258677}
-        m_MethodName: MeteorAttack
+        m_MethodName: DestroyObjects
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5743,6 +5745,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  player: {fileID: 1614162319}
+  ps: {fileID: 334295532}
 --- !u!1 &1412059938
 GameObject:
   m_ObjectHideFlags: 0

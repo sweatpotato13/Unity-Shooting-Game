@@ -41,6 +41,10 @@ public class PlayerManager : MonoBehaviour
         return this.bomb;
     }
 
+    public void setBomb(int bombCount){
+        this.bomb = bombCount;
+    }
+
     IEnumerator blink(){
         for(int i = 0;i<6;i++){
             render.color = new Color(1f, 1f, 1f, 0.5f);
