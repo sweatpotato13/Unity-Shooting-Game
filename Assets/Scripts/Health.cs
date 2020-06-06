@@ -42,8 +42,9 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		Debug.Log(hp);
         for(int i = 0;i<pattern.Length;i++){
-			if(hp > keyHP[i]){
+			if((hp-damage) > keyHP[i]){
 				pattern[i].SetActive(true);
 				break;
 			}
