@@ -29,13 +29,13 @@ public class BGMSelector : MonoBehaviour
     {
         Debug.Log("SetBGM1");
         SoundManager.instance.StopBGM();
-        SoundManager.instance.PlaySound("yamanote");
+        SoundManager.instance.PlayLoopSound("00_TER_08_001");
     }
 
     public void SetBGM2() // Sound Manager를 이용하는 방법으로 바뀌어야함. 이 메소드는 임시방편.
     {
         Debug.Log("SetBGM2");
         SoundManager.instance.StopBGM();
-        SoundManager.instance.PlaySound("Emerald_Sword");
+        SoundManager.instance.PlayLoopSound("00_TER_08_002");
     }
 }
