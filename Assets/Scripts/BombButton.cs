@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BombButton1 : MonoBehaviour
+public class BombButton : MonoBehaviour
 {
     // Start is called before the first frame update
     private int BombCount;
     public List<Button> buttons;
+    public GameObject player;
+    public ParticleSystem ps;
     void Start()
     {
         
@@ -21,7 +23,7 @@ public class BombButton1 : MonoBehaviour
 
     public void DestroyObjects(string tag)
     {   
-        BombCount = PlayerPrefs.GetInt("Bomb");
+        BombCount = player.GetComponent<PlayerManager>().getBomb();
         if (BombCount > 0)
         {
             BombCount -= 1;
@@ -37,8 +39,7 @@ public class BombButton1 : MonoBehaviour
                     buttons[i].interactable = false;
                 }
             }
-            PlayerPrefs.SetInt("Bomb", BombCount);
-            ParticleSystem ps = GameObject.Find("BombParticle").GetComponent<ParticleSystem>();
+            player.GetComponent<PlayerManager>().setBomb(BombCount);
             ps.Play();
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag(tag);
             foreach (GameObject target in gameObjects)

@@ -22,11 +22,11 @@ public class StageSelectScene : MonoBehaviour
     {
         string name =  EventSystem.current.currentSelectedGameObject.name;
         PlayerPrefs.SetString("stage", name);
-        SceneManager.LoadScene("InGameScene");
+        LoadingSceneManager.LoadScene("InGameScene");
     }
 
     public void ChangeMainScene()
     {
-        SceneManager.LoadScene("MainScene");
+        LoadingSceneManager.LoadScene("MainScene");
     }
 }
