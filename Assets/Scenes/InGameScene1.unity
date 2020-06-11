@@ -5438,8 +5438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
-  player: {fileID: 0}
-  ps: {fileID: 0}
+  player: {fileID: 1614162319}
+  ps: {fileID: 334295532}
 --- !u!114 &584397795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5755,7 +5755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos: {fileID: 1029022734}
   target: {fileID: 1614162320}
-  bullet: {fileID: 0}
+  bullet: {fileID: 5345813868849902047, guid: ea4c2b54b70964cb89040338583f3282, type: 3}
   shootingRate: 2
 --- !u!1 &1181278198
 GameObject:
@@ -5884,8 +5884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
-  player: {fileID: 0}
-  ps: {fileID: 0}
+  player: {fileID: 1614162319}
+  ps: {fileID: 1477684690}
 --- !u!114 &1203442666
 MonoBehaviour:
   m_ObjectHideFlags: 0

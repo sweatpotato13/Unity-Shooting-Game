@@ -6,23 +6,12 @@ using UnityEngine.EventSystems;
 
 public class StageSelectScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void ChangeInGameScene(int stageLevel)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void ChangeInGameScene()
-    {
-        string name =  EventSystem.current.currentSelectedGameObject.name;
-        PlayerPrefs.SetString("stage", name);
-        LoadingSceneManager.LoadScene("InGameScene");
+        
+        string sceneName = "InGameScene";
+        string level = stageLevel.ToString();
+        LoadingSceneManager.LoadScene(sceneName + level);
     }
 
     public void ChangeMainScene()
