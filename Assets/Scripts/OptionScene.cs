@@ -27,7 +27,6 @@ public class OptionScene : MonoBehaviour
     void Update()
     {
         SoundSlider();
-        Save();
     }
 
     public void Load(){
@@ -41,7 +40,15 @@ public class OptionScene : MonoBehaviour
         }
     }
 
+    public void Reset(){
+        bgmVolume.value = 1f;
+        sfxVolume.value = 1f;
+        Save();
+    }
+
     public void Save(){
+        SoundManager.instance.SetVolumeBGM(bgmVolume.value);
+        SoundManager.instance.SetVolumeSFX(sfxVolume.value);
         PlayerPrefs.SetFloat("bgmVol", bgmVol);
         PlayerPrefs.SetFloat("sfxVol", sfxVol);
         Debug.Log("bgmVol Saved" + bgmVol);
@@ -50,17 +57,21 @@ public class OptionScene : MonoBehaviour
 
     public void SoundSlider()
     {
-        SoundManager.instance.SetVolumeBGM(bgmVolume.value);
         bgmVol = bgmVolume.value;
-        
-        SoundManager.instance.SetVolumeSFX(sfxVolume.value);
         sfxVol = sfxVolume.value;
         Debug.Log("bgmVol Updated" + bgmVol);
         Debug.Log("sfxVol Updated" + sfxVol);
     }
 
-    public void ChangeMainScene()
+    public void Back()
     {
+        SoundManager.instance.PlaySound("ButtonClick");
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void Apply()
+    {
+        Save();
         SoundManager.instance.PlaySound("ButtonClick");
         SceneManager.LoadScene("MainScene");
     }
