@@ -59,6 +59,7 @@ public class PlayerManager : MonoBehaviour
         if(invincible <= System.DateTime.Now)
         {
             SoundManager.instance.PlaySound("Explode_02",  SoundManager.instance.masterVolumeSFX);
+            Handheld.Vibrate();
             life -= dmg;
             Reset();
         }
