@@ -8,9 +8,11 @@ public class OptionScene : MonoBehaviour
 {
     public Slider bgmVolume;
     public Slider sfxVolume;
+    public Toggle isVibrate;
 
     private float bgmVol = 1f;
     private float sfxVol = 1f;
+    private bool isChecked = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,8 @@ public class OptionScene : MonoBehaviour
 
         sfxVolume.value = sfxVol;
         SoundManager.instance.SetVolumeSFX(sfxVolume.value);
+
+        isVibrate.isOn = isChecked;
     }
 
     // Update is called once per frame
@@ -38,21 +42,30 @@ public class OptionScene : MonoBehaviour
             sfxVol = PlayerPrefs.GetFloat("sfxVol");
             Debug.Log("sfxVol Loaded" + sfxVol);
         }
+        if(PlayerPrefs.HasKey("isVibrate")){
+            string value = PlayerPrefs.GetString("isVibrate", "false");
+            isChecked = System.Convert.ToBoolean(value);
+        }
+    }
+
+    public bool getVibrated(){
+        return isChecked;
     }
 
     public void Reset(){
         bgmVolume.value = 1f;
         sfxVolume.value = 1f;
+        isVibrate.isOn = true;
         Save();
     }
 
     public void Save(){
         SoundManager.instance.SetVolumeBGM(bgmVolume.value);
         SoundManager.instance.SetVolumeSFX(sfxVolume.value);
+        isChecked = isVibrate.isOn;
         PlayerPrefs.SetFloat("bgmVol", bgmVol);
         PlayerPrefs.SetFloat("sfxVol", sfxVol);
-        Debug.Log("bgmVol Saved" + bgmVol);
-        Debug.Log("sfxVol Saved" + sfxVol);
+        PlayerPrefs.SetString("isVibrate", isChecked.ToString());
     }
 
     public void SoundSlider()
