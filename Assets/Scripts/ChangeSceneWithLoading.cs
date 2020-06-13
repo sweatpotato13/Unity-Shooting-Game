@@ -8,6 +8,7 @@ public class ChangeSceneWithLoading : MonoBehaviour
      public void ChangeScene(string sceneName)
     {
         LoadingSceneManager.LoadScene(sceneName);
+        Time.timeScale = 1f;
     }
 
     public void ChangeInGameScene(int stageLevel)
@@ -16,5 +17,6 @@ public class ChangeSceneWithLoading : MonoBehaviour
         string sceneName = "InGameScene";
         string level = stageLevel.ToString();
         LoadingSceneManager.LoadScene(sceneName + level);
+        Time.timeScale = 1f;
     }
 }
