@@ -10,11 +10,15 @@ public class Health : MonoBehaviour
     [SerializeField] GameObject[] pattern;
 	[SerializeField] int[] keyHP;
 
+	public GameObject resultPanel;
+
 	public void Damage(int value){
 		damage += value;
 		//hp = hp - value;
 		if (damage >= hp) {
 			Destroy (gameObject);
+			resultPanel.SetActive(true);
+        	Time.timeScale = 0f;
 		}
 	}
 
@@ -50,6 +54,7 @@ public class Health : MonoBehaviour
 			}
 			else{
 				pattern[i].SetActive(false);
+
 			}
 		}
 

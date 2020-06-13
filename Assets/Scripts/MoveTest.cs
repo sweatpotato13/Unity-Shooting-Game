@@ -20,8 +20,10 @@ public class MoveTest : MonoBehaviour
     // Update is called once per frame
   	void Update()
   	{
-  		//DragObject();
-        SlideMove();
+  		if (!PauseMenu.isPaused)
+		{
+        	SlideMove();
+	  	}
   	}
 
     void SlideMove()
