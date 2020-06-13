@@ -69,7 +69,8 @@ public class PlayerManager : MonoBehaviour
     {
         if(invincible <= System.DateTime.Now)
         {
-            SoundManager.instance.PlaySound("Explode_02",  SoundManager.instance.masterVolumeSFX);
+            if(SoundManager.instance != null)
+                SoundManager.instance.PlaySound("Explode_02",  SoundManager.instance.masterVolumeSFX);
             if(isVibrate)
                 Handheld.Vibrate();
             life -= dmg;

@@ -24,7 +24,7 @@ public class LifeDisplay : MonoBehaviour
         else
             val = 0;
         life = val.ToString();       
-        Debug.Log(life); 
-        myText.GetComponent<Text>().text=life;        
+        Debug.Log("Life : " + life); 
+        myText.GetComponent<Text>().text = life;        
     }
 }
