@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public bool isVibrate = true;
     public int life = 3;
     public int bomb = 3;
     public int score = 0;
@@ -17,12 +18,22 @@ public class PlayerManager : MonoBehaviour
     {
   		startPos = this.transform.position;
         render = GetComponent<SpriteRenderer>();
+        if(PlayerPrefs.HasKey("isVibrate")){
+            string value = PlayerPrefs.GetString("isVibrate", "false");
+            isVibrate = System.Convert.ToBoolean(value);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void SetVibrate(bool val)
+    {
+        isVibrate = val;
     }
 
     public void addScore(int val){
@@ -59,6 +70,8 @@ public class PlayerManager : MonoBehaviour
         if(invincible <= System.DateTime.Now)
         {
             SoundManager.instance.PlaySound("Explode_02",  SoundManager.instance.masterVolumeSFX);
+            if(isVibrate)
+                Handheld.Vibrate();
             life -= dmg;
             Reset();
         }
