@@ -1704,7 +1704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Invert Y
+  m_Text: Vibrate
 --- !u!222 &1291434045
 CanvasRenderer:
   m_ObjectHideFlags: 0
