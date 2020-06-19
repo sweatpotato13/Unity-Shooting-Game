@@ -8,6 +8,7 @@ public class SpreadShot : MonoBehaviour
     //총알이 발사될 위치
     public Transform pos;
     public GameObject bullet;
+    public int count = 3;
 	public float shootingRate = 0.25f;
 	private float shootCooldown;
 
@@ -35,7 +36,7 @@ public class SpreadShot : MonoBehaviour
  void shot()
     {
         //360번 반복
-        for (int i = 245; i < 295; i += 5)
+        for (int i = 270-count/2*5; i <= 270+count/2*5; i += 5)
         {
             //총알 생성
             GameObject temp = Instantiate(bullet);
