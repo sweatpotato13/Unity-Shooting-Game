@@ -13,7 +13,30 @@ public class Spinshot : MonoBehaviour {
     //발사될 총알 오브젝트이다.
     public GameObject bullet;
 
+	public float shootingRate = 0.25f;
+	private float shootCooldown;
+
+	void Start () {
+		shootCooldown = 0f;
+	}
+
+	public bool CanAttack{
+		get	{
+			return shootCooldown <= 0f;
+		}
+	}
+
     private void Update()
+    {
+        if (shootCooldown > 0) 	{
+			shootCooldown -= Time.deltaTime;
+		}
+        if (CanAttack) {
+            shootCooldown = shootingRate;
+            shot();
+        }
+    }
+    void shot()
     {
         //회전
         transform.Rotate(Vector3.forward * rot_Speed*100 * Time.deltaTime);
@@ -28,5 +51,4 @@ public class Spinshot : MonoBehaviour {
         //->해당 오브젝트가 오브젝트가 360도 회전하고 있으므로, Rotation이 방향이 됨.
         temp.transform.rotation = transform.rotation;
     }
-
 }
