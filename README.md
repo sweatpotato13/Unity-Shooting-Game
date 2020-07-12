@@ -7,12 +7,12 @@ Make Shooting game with unity for iOS
 ![contributors](https://img.shields.io/github/contributors/sweatpotato13/Unity-Project)
 ![stars](https://img.shields.io/github/stars/sweatpotato13/Unity-Project?style=plastic)
 
-![example](https://i.imgur.com/R3sApLF.png)
+![example](https://i.imgur.com/J3hSYm4.png)
 
 ## Prerequisites
 
 ```
-??????????
+iOS 13 or above
 ```
 
 ## Built With
