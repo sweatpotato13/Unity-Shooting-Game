@@ -19,6 +19,10 @@ public class Health : MonoBehaviour
 			Destroy (gameObject);
 			resultPanel.SetActive(true);
         	Time.timeScale = 0f;
+			if(PlayerPrefs.HasKey("cleared")){
+				int temp = PlayerPrefs.GetInt("cleared");
+				PlayerPrefs.SetInt("cleared", temp+1);
+        	}
 		}
 	}
 

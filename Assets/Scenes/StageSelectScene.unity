@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &230539358
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &306140295
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &501133916
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &837936894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &1180329811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &1430843489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,6 +2240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &1574855737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2252,7 @@ GameObject:
   - component: {fileID: 1574855738}
   - component: {fileID: 1574855739}
   - component: {fileID: 1574855740}
+  - component: {fileID: 1574855741}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -2318,6 +2326,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 1
+--- !u!114 &1574855741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574855737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stages:
+  - {fileID: 739946970}
+  - {fileID: 62988894}
+  - {fileID: 2064905256}
+  - {fileID: 1570003642}
+  - {fileID: 230539358}
+  - {fileID: 306140295}
+  - {fileID: 1224126450}
+  - {fileID: 1714937532}
 --- !u!1 &1596505255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2583,6 +2612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &1804467775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2879,6 +2909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe121d057afa41f49479de0027799d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages: []
 --- !u!1 &2073243051
 GameObject:
   m_ObjectHideFlags: 0
