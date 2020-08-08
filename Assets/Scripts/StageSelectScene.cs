@@ -6,6 +6,21 @@ using UnityEngine.EventSystems;
 
 public class StageSelectScene : MonoBehaviour
 {
+    public GameObject[] stages;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        for(int i = 0;i<stages.Length;i++){
+            stages[i].SetActive(false);
+        }
+        int isCleared = PlayerPrefs.GetInt("cleared");
+        for(int i = 0;i<stages.Length;i++){
+            if(i > isCleared) break;
+            stages[i].SetActive(true);
+        }
+    }
+
     public void ChangeInGameScene(int stageLevel)
     {
         
