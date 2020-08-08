@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -21,7 +22,13 @@ public class Health : MonoBehaviour
         	Time.timeScale = 0f;
 			if(PlayerPrefs.HasKey("cleared")){
 				int temp = PlayerPrefs.GetInt("cleared");
-				PlayerPrefs.SetInt("cleared", temp+1);
+				var currentScene = SceneManager.GetActiveScene();
+				var currentSceneName = currentScene.name;
+				int cmp = currentSceneName[currentSceneName.Length-1] - '0';
+				Debug.Log(temp);
+				Debug.Log(cmp);
+				if(temp < cmp)
+					PlayerPrefs.SetInt("cleared", temp+1);
         	}
 		}
 	}
